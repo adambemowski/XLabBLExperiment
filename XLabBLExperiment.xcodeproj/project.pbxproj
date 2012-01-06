@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090C086F14A9241500E200C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C086E14A9241500E200C8 /* UIKit.framework */; };
+		090C087114A9241500E200C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087014A9241500E200C8 /* Foundation.framework */; };
+		090C087314A9241500E200C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087214A9241500E200C8 /* CoreGraphics.framework */; };
+		090C087914A9241500E200C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 090C087714A9241500E200C8 /* InfoPlist.strings */; };
+		090C087C14A9241500E200C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C087B14A9241500E200C8 /* main.m */; };
+		090C087F14A9241500E200C8 /* XLabBLExperimentAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C087E14A9241500E200C8 /* XLabBLExperimentAppDelegate.m */; };
+		090C088214A9241500E200C8 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090C088014A9241500E200C8 /* MainWindow.xib */; };
+		090C088514A9241500E200C8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C088414A9241500E200C8 /* MainViewController.m */; };
+		090C088714A9241500E200C8 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090C088614A9241500E200C8 /* MainView.xib */; };
+		090C088A14A9241500E200C8 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C088914A9241500E200C8 /* FlipsideViewController.m */; };
+		090C088C14A9241500E200C8 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090C088B14A9241500E200C8 /* FlipsideView.xib */; };
+		090C089314A9241500E200C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C086E14A9241500E200C8 /* UIKit.framework */; };
+		090C089414A9241500E200C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087014A9241500E200C8 /* Foundation.framework */; };
+		090C089514A9241500E200C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087214A9241500E200C8 /* CoreGraphics.framework */; };
+		090C089D14A9241500E200C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 090C089B14A9241500E200C8 /* InfoPlist.strings */; };
+		090C08A014A9241500E200C8 /* XLabBLExperimentTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 090C089F14A9241500E200C8 /* XLabBLExperimentTests.h */; };
+		090C08A214A9241500E200C8 /* XLabBLExperimentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C08A114A9241500E200C8 /* XLabBLExperimentTests.m */; };
+		090C08AC14A9268F00E200C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C08AB14A9268F00E200C8 /* CoreLocation.framework */; };
+		090C08C514B5137100E200C8 /* BudgetLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C08C314B5137000E200C8 /* BudgetLineTableViewController.m */; };
+		090C08C614B5137100E200C8 /* BudgetLineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090C08C414B5137100E200C8 /* BudgetLineTableViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		090C089614A9241500E200C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 090C086114A9241500E200C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 090C086914A9241500E200C8;
+			remoteInfo = XLabBLExperiment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		090C086A14A9241500E200C8 /* XLabBLExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLabBLExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		090C086E14A9241500E200C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		090C087014A9241500E200C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		090C087214A9241500E200C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		090C087614A9241500E200C8 /* XLabBLExperiment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XLabBLExperiment-Info.plist"; sourceTree = "<group>"; };
+		090C087814A9241500E200C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		090C087A14A9241500E200C8 /* XLabBLExperiment-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLabBLExperiment-Prefix.pch"; sourceTree = "<group>"; };
+		090C087B14A9241500E200C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		090C087D14A9241500E200C8 /* XLabBLExperimentAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLabBLExperimentAppDelegate.h; sourceTree = "<group>"; };
+		090C087E14A9241500E200C8 /* XLabBLExperimentAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLabBLExperimentAppDelegate.m; sourceTree = "<group>"; };
+		090C088114A9241500E200C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		090C088314A9241500E200C8 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		090C088414A9241500E200C8 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		090C088614A9241500E200C8 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		090C088814A9241500E200C8 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		090C088914A9241500E200C8 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		090C088B14A9241500E200C8 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+		090C089214A9241500E200C8 /* XLabBLExperimentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLabBLExperimentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		090C089A14A9241500E200C8 /* XLabBLExperimentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XLabBLExperimentTests-Info.plist"; sourceTree = "<group>"; };
+		090C089C14A9241500E200C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		090C089E14A9241500E200C8 /* XLabBLExperimentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLabBLExperimentTests-Prefix.pch"; sourceTree = "<group>"; };
+		090C089F14A9241500E200C8 /* XLabBLExperimentTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLabBLExperimentTests.h; sourceTree = "<group>"; };
+		090C08A114A9241500E200C8 /* XLabBLExperimentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLabBLExperimentTests.m; sourceTree = "<group>"; };
+		090C08AB14A9268F00E200C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		090C08C214B5137000E200C8 /* BudgetLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetLineTableViewController.h; sourceTree = "<group>"; };
+		090C08C314B5137000E200C8 /* BudgetLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetLineTableViewController.m; sourceTree = "<group>"; };
+		090C08C414B5137100E200C8 /* BudgetLineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BudgetLineTableViewController.xib; path = XLabBLExperiment/BudgetLineTableViewController.xib; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		090C086714A9241500E200C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C08AC14A9268F00E200C8 /* CoreLocation.framework in Frameworks */,
+				090C086F14A9241500E200C8 /* UIKit.framework in Frameworks */,
+				090C087114A9241500E200C8 /* Foundation.framework in Frameworks */,
+				090C087314A9241500E200C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		090C088E14A9241500E200C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C089314A9241500E200C8 /* UIKit.framework in Frameworks */,
+				090C089414A9241500E200C8 /* Foundation.framework in Frameworks */,
+				090C089514A9241500E200C8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090C085F14A9241500E200C8 = {
+			isa = PBXGroup;
+			children = (
+				090C087414A9241500E200C8 /* XLabBLExperiment */,
+				090C089814A9241500E200C8 /* XLabBLExperimentTests */,
+				090C086D14A9241500E200C8 /* Frameworks */,
+				090C086B14A9241500E200C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		090C086B14A9241500E200C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				090C086A14A9241500E200C8 /* XLabBLExperiment.app */,
+				090C089214A9241500E200C8 /* XLabBLExperimentTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		090C086D14A9241500E200C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				090C08AB14A9268F00E200C8 /* CoreLocation.framework */,
+				090C086E14A9241500E200C8 /* UIKit.framework */,
+				090C087014A9241500E200C8 /* Foundation.framework */,
+				090C087214A9241500E200C8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		090C087414A9241500E200C8 /* XLabBLExperiment */ = {
+			isa = PBXGroup;
+			children = (
+				090C087D14A9241500E200C8 /* XLabBLExperimentAppDelegate.h */,
+				090C087E14A9241500E200C8 /* XLabBLExperimentAppDelegate.m */,
+				090C088314A9241500E200C8 /* MainViewController.h */,
+				090C088414A9241500E200C8 /* MainViewController.m */,
+				090C088814A9241500E200C8 /* FlipsideViewController.h */,
+				090C088914A9241500E200C8 /* FlipsideViewController.m */,
+				090C08C214B5137000E200C8 /* BudgetLineTableViewController.h */,
+				090C08C314B5137000E200C8 /* BudgetLineTableViewController.m */,
+				090C08AD14A9270100E200C8 /* xib files */,
+				090C087514A9241500E200C8 /* Supporting Files */,
+			);
+			path = XLabBLExperiment;
+			sourceTree = "<group>";
+		};
+		090C087514A9241500E200C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				090C087614A9241500E200C8 /* XLabBLExperiment-Info.plist */,
+				090C087714A9241500E200C8 /* InfoPlist.strings */,
+				090C087A14A9241500E200C8 /* XLabBLExperiment-Prefix.pch */,
+				090C087B14A9241500E200C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		090C089814A9241500E200C8 /* XLabBLExperimentTests */ = {
+			isa = PBXGroup;
+			children = (
+				090C089F14A9241500E200C8 /* XLabBLExperimentTests.h */,
+				090C08A114A9241500E200C8 /* XLabBLExperimentTests.m */,
+				090C089914A9241500E200C8 /* Supporting Files */,
+			);
+			path = XLabBLExperimentTests;
+			sourceTree = "<group>";
+		};
+		090C089914A9241500E200C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				090C089A14A9241500E200C8 /* XLabBLExperimentTests-Info.plist */,
+				090C089B14A9241500E200C8 /* InfoPlist.strings */,
+				090C089E14A9241500E200C8 /* XLabBLExperimentTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		090C08AD14A9270100E200C8 /* xib files */ = {
+			isa = PBXGroup;
+			children = (
+				090C08C414B5137100E200C8 /* BudgetLineTableViewController.xib */,
+				090C088B14A9241500E200C8 /* FlipsideView.xib */,
+				090C088614A9241500E200C8 /* MainView.xib */,
+				090C088014A9241500E200C8 /* MainWindow.xib */,
+			);
+			name = "xib files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		090C086914A9241500E200C8 /* XLabBLExperiment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 090C08A514A9241500E200C8 /* Build configuration list for PBXNativeTarget "XLabBLExperiment" */;
+			buildPhases = (
+				090C086614A9241500E200C8 /* Sources */,
+				090C086714A9241500E200C8 /* Frameworks */,
+				090C086814A9241500E200C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLabBLExperiment;
+			productName = XLabBLExperiment;
+			productReference = 090C086A14A9241500E200C8 /* XLabBLExperiment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		090C089114A9241500E200C8 /* XLabBLExperimentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 090C08A814A9241500E200C8 /* Build configuration list for PBXNativeTarget "XLabBLExperimentTests" */;
+			buildPhases = (
+				090C088D14A9241500E200C8 /* Sources */,
+				090C088E14A9241500E200C8 /* Frameworks */,
+				090C088F14A9241500E200C8 /* Resources */,
+				090C089014A9241500E200C8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				090C089714A9241500E200C8 /* PBXTargetDependency */,
+			);
+			name = XLabBLExperimentTests;
+			productName = XLabBLExperimentTests;
+			productReference = 090C089214A9241500E200C8 /* XLabBLExperimentTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		090C086114A9241500E200C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "UC Berkeley";
+			};
+			buildConfigurationList = 090C086414A9241500E200C8 /* Build configuration list for PBXProject "XLabBLExperiment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 090C085F14A9241500E200C8;
+			productRefGroup = 090C086B14A9241500E200C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				090C086914A9241500E200C8 /* XLabBLExperiment */,
+				090C089114A9241500E200C8 /* XLabBLExperimentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		090C086814A9241500E200C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C087914A9241500E200C8 /* InfoPlist.strings in Resources */,
+				090C088214A9241500E200C8 /* MainWindow.xib in Resources */,
+				090C088714A9241500E200C8 /* MainView.xib in Resources */,
+				090C088C14A9241500E200C8 /* FlipsideView.xib in Resources */,
+				090C08C614B5137100E200C8 /* BudgetLineTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		090C088F14A9241500E200C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C089D14A9241500E200C8 /* InfoPlist.strings in Resources */,
+				090C08A014A9241500E200C8 /* XLabBLExperimentTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		090C089014A9241500E200C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		090C086614A9241500E200C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C087C14A9241500E200C8 /* main.m in Sources */,
+				090C087F14A9241500E200C8 /* XLabBLExperimentAppDelegate.m in Sources */,
+				090C088514A9241500E200C8 /* MainViewController.m in Sources */,
+				090C088A14A9241500E200C8 /* FlipsideViewController.m in Sources */,
+				090C08C514B5137100E200C8 /* BudgetLineTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		090C088D14A9241500E200C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090C08A214A9241500E200C8 /* XLabBLExperimentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		090C089714A9241500E200C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 090C086914A9241500E200C8 /* XLabBLExperiment */;
+			targetProxy = 090C089614A9241500E200C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		090C087714A9241500E200C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				090C087814A9241500E200C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		090C088014A9241500E200C8 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				090C088114A9241500E200C8 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		090C089B14A9241500E200C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				090C089C14A9241500E200C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		090C08A314A9241500E200C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		090C08A414A9241500E200C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		090C08A614A9241500E200C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XLabBLExperiment/XLabBLExperiment-Prefix.pch";
+				INFOPLIST_FILE = "XLabBLExperiment/XLabBLExperiment-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		090C08A714A9241500E200C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XLabBLExperiment/XLabBLExperiment-Prefix.pch";
+				INFOPLIST_FILE = "XLabBLExperiment/XLabBLExperiment-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		090C08A914A9241500E200C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XLabBLExperiment.app/XLabBLExperiment";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XLabBLExperimentTests/XLabBLExperimentTests-Prefix.pch";
+				INFOPLIST_FILE = "XLabBLExperimentTests/XLabBLExperimentTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		090C08AA14A9241500E200C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/XLabBLExperiment.app/XLabBLExperiment";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XLabBLExperimentTests/XLabBLExperimentTests-Prefix.pch";
+				INFOPLIST_FILE = "XLabBLExperimentTests/XLabBLExperimentTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		090C086414A9241500E200C8 /* Build configuration list for PBXProject "XLabBLExperiment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090C08A314A9241500E200C8 /* Debug */,
+				090C08A414A9241500E200C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		090C08A514A9241500E200C8 /* Build configuration list for PBXNativeTarget "XLabBLExperiment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090C08A614A9241500E200C8 /* Debug */,
+				090C08A714A9241500E200C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		090C08A814A9241500E200C8 /* Build configuration list for PBXNativeTarget "XLabBLExperimentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				090C08A914A9241500E200C8 /* Debug */,
+				090C08AA14A9241500E200C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 090C086114A9241500E200C8 /* Project object */;
+}
