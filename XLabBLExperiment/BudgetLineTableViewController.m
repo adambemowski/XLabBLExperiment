@@ -187,7 +187,17 @@
     else if ([currentMode isEqualToString:@"line"]) {
         currentMode = @"experiment";
         line = indexPath.row +1;
-        NSLog(@"Draw experiment:%i, session:%i, line:%i in the view",experiment,session,line);
+        NSLog(@"[BLTVC] Draw experiment:%i, session:%i, line:%i in the view",experiment,session,line);
+        NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[NSNumber numberWithInt:experiment] forKey:@"currentExperiment"];
+        [defaults setObject:[NSNumber numberWithInt:session] forKey:@"currentSession"];
+        [defaults setObject:[NSNumber numberWithInt:line] forKey:@"currentLine"];
+//        FlipsideViewController *f = [[FlipsideViewController alloc] init];
+//        f.FSexperimentTemp = experiment;
+//        f.FSsessionTemp = session;
+//        f.FSlineTemp = line;
+        //[f setUpBudgetLine];
+        //[f release];
         [self.delegate BudgetLineTableViewControllerDidFinish:self];
     }
     [bltableView reloadData];

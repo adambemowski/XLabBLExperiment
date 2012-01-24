@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090A0A1014B98BFD007AD509 /* BLGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090A0A0F14B98BFD007AD509 /* BLGraphView.m */; };
 		090C086F14A9241500E200C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C086E14A9241500E200C8 /* UIKit.framework */; };
 		090C087114A9241500E200C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087014A9241500E200C8 /* Foundation.framework */; };
 		090C087314A9241500E200C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C087214A9241500E200C8 /* CoreGraphics.framework */; };
@@ -27,6 +28,9 @@
 		090C08AC14A9268F00E200C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C08AB14A9268F00E200C8 /* CoreLocation.framework */; };
 		090C08C514B5137100E200C8 /* BudgetLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C08C314B5137000E200C8 /* BudgetLineTableViewController.m */; };
 		090C08C614B5137100E200C8 /* BudgetLineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090C08C414B5137100E200C8 /* BudgetLineTableViewController.xib */; };
+		097621EB14CA436D008FF2ED /* XIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 097621EA14CA436D008FF2ED /* XIcon.png */; };
+		097621F014CA4B07008FF2ED /* xbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 097621EF14CA4B07008FF2ED /* xbackground.png */; };
+		097621FB14CC9C51008FF2ED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 097621FA14CC9C51008FF2ED /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090A0A0E14B98BFD007AD509 /* BLGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLGraphView.h; sourceTree = "<group>"; };
+		090A0A0F14B98BFD007AD509 /* BLGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLGraphView.m; sourceTree = "<group>"; };
 		090C086A14A9241500E200C8 /* XLabBLExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLabBLExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090C086E14A9241500E200C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		090C087014A9241500E200C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +73,9 @@
 		090C08C214B5137000E200C8 /* BudgetLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetLineTableViewController.h; sourceTree = "<group>"; };
 		090C08C314B5137000E200C8 /* BudgetLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetLineTableViewController.m; sourceTree = "<group>"; };
 		090C08C414B5137100E200C8 /* BudgetLineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BudgetLineTableViewController.xib; path = XLabBLExperiment/BudgetLineTableViewController.xib; sourceTree = SOURCE_ROOT; };
+		097621EA14CA436D008FF2ED /* XIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XIcon.png; sourceTree = "<group>"; };
+		097621EF14CA4B07008FF2ED /* xbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xbackground.png; sourceTree = "<group>"; };
+		097621FA14CC9C51008FF2ED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +140,8 @@
 				090C087E14A9241500E200C8 /* XLabBLExperimentAppDelegate.m */,
 				090C088314A9241500E200C8 /* MainViewController.h */,
 				090C088414A9241500E200C8 /* MainViewController.m */,
+				090A0A0E14B98BFD007AD509 /* BLGraphView.h */,
+				090A0A0F14B98BFD007AD509 /* BLGraphView.m */,
 				090C088814A9241500E200C8 /* FlipsideViewController.h */,
 				090C088914A9241500E200C8 /* FlipsideViewController.m */,
 				090C08C214B5137000E200C8 /* BudgetLineTableViewController.h */,
@@ -144,6 +155,9 @@
 		090C087514A9241500E200C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				097621EF14CA4B07008FF2ED /* xbackground.png */,
+				097621FA14CC9C51008FF2ED /* Default.png */,
+				097621EA14CA436D008FF2ED /* XIcon.png */,
 				090C087614A9241500E200C8 /* XLabBLExperiment-Info.plist */,
 				090C087714A9241500E200C8 /* InfoPlist.strings */,
 				090C087A14A9241500E200C8 /* XLabBLExperiment-Prefix.pch */,
@@ -258,6 +272,9 @@
 				090C088714A9241500E200C8 /* MainView.xib in Resources */,
 				090C088C14A9241500E200C8 /* FlipsideView.xib in Resources */,
 				090C08C614B5137100E200C8 /* BudgetLineTableViewController.xib in Resources */,
+				097621EB14CA436D008FF2ED /* XIcon.png in Resources */,
+				097621F014CA4B07008FF2ED /* xbackground.png in Resources */,
+				097621FB14CC9C51008FF2ED /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +315,7 @@
 				090C088514A9241500E200C8 /* MainViewController.m in Sources */,
 				090C088A14A9241500E200C8 /* FlipsideViewController.m in Sources */,
 				090C08C514B5137100E200C8 /* BudgetLineTableViewController.m in Sources */,
+				090A0A1014B98BFD007AD509 /* BLGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +488,7 @@
 				090C08A714A9241500E200C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		090C08A814A9241500E200C8 /* Build configuration list for PBXNativeTarget "XLabBLExperimentTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +497,7 @@
 				090C08AA14A9241500E200C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,7 +11,9 @@
 @implementation MainViewController
 
 @synthesize getExperimentButton;
-
+@synthesize progressIndicator;
+@synthesize progressLabel;
+@synthesize loadedAmountIndicator;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -29,6 +31,8 @@
         [locationManager release];
         
 	}
+    [progressIndicator stopAnimating];
+    loadedAmountIndicator.hidden = YES;
     [super viewDidLoad];
 }
 
@@ -43,7 +47,7 @@
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
     controller.delegate = self;
     
-    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentModalViewController:controller animated:YES];
     
     [controller release];
@@ -77,12 +81,18 @@
 }
 
 - (IBAction)pressedExpButton {
+    //loading label, activity, and progressbar update at end of function, seperate parser into seperate function later to complete loading views.
+    loadedAmountIndicator.hidden = NO;
+    loadedAmountIndicator.progress = 0;
+    progressLabel.text = @"Retrieving Experiments";
+    [self.progressIndicator startAnimating];
     NSURLResponse *routeLoaderResponse;
 	NSError *routeLoaderError;
     NSData *predictionData = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ec2-107-20-49-145.compute-1.amazonaws.com/xlab/api/budget/"] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60] returningResponse:&routeLoaderResponse error:&routeLoaderError];
     NSString *returnString = [[[NSString alloc] initWithData:predictionData encoding:NSUTF8StringEncoding] autorelease];
     
     NSLog(@"%@", returnString);
+    loadedAmountIndicator.progress = .5;
     
     //parser - may add to another file later
     NSUInteger count = 0;
@@ -118,6 +128,8 @@
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
     for (int i = 0; i < count; i++) {
+        progressLabel.text = [NSString stringWithFormat:@"Parsing experiment:%i", i+1];
+        
         NSUInteger length = [returnString length];
         //experiment#
         //info on experiment
@@ -178,12 +190,12 @@
         rangeComma1 = rangeComma2;
         [experimentInfo setObject:xUnits forKey:@"xUnits"];
         rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
-        xMin = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
-        [experimentInfo setObject:xMin forKey:@"xMin"];
-        rangeComma1 = rangeComma2;
-        rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
         xMax = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
         [experimentInfo setObject:xMax forKey:@"xMax"];
+        rangeComma1 = rangeComma2;
+        rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
+        xMin = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
+        [experimentInfo setObject:xMin forKey:@"xMin"];
         rangeComma1 = rangeComma2;
         rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
         yLabel = [returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))];
@@ -194,12 +206,12 @@
         [experimentInfo setObject:yUnits forKey:@"yUnits"];
         rangeComma1 = rangeComma2;
         rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
-        yMin = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
-        [experimentInfo setObject:yMin forKey:@"yMin"];
-        rangeComma1 = rangeComma2;
-        rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
         yMax = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
         [experimentInfo setObject:yMax forKey:@"yMax"];
+        rangeComma1 = rangeComma2;
+        rangeComma2 = [returnString rangeOfString:@"," options:0 range:NSMakeRange((rangeComma1.location+1), (length-rangeComma1.location - 1))];
+        yMin = [formatter numberFromString:[returnString substringWithRange:NSMakeRange((rangeComma1.location+1), (rangeComma2.location - rangeComma1.location - 1))]];
+        [experimentInfo setObject:yMin forKey:@"yMin"];
         //add info dictionary to experiment dictionary
         [experiment setObject:[[experimentInfo copy] autorelease] forKey:@"info"];
 
@@ -305,11 +317,23 @@
             NSString *editedString = [returnString substringWithRange:NSMakeRange((tempRange1.location+2), (length - tempRange1.location - 2))];
             returnString = editedString;
         }
+        loadedAmountIndicator.progress = (.5 + (i+1)/count);
     }
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[[headDic copy] autorelease] forKey:@"BudgetLines"];
     NSLog(@"%@", headDic);
     [formatter release];
+    
+    loadedAmountIndicator.hidden = YES;
+    progressLabel.text = @"";
+    [progressIndicator stopAnimating];
+    
+    //show flipside view
+    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
+    controller.delegate = self;
+    controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentModalViewController:controller animated:YES];
+    [controller release];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
