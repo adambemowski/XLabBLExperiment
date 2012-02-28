@@ -10,12 +10,17 @@
 #import <CoreLocation/CoreLocation.h>
 #import "BudgetLineTableViewController.h"
 #import "BLGraphView.h"
+#import "ExperimentBL.h"
+#import "Line.h"
+#import "Session.h"
+#import "XLabBLExperimentAppDelegate.h"
+#import <CoreData/CoreData.h>
 
 @class BLGraphView;
 
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController <BudgetLineTableViewControllerDelegate>{
+@interface FlipsideViewController : UIViewController {
     
     IBOutlet BLGraphView *BLG;
     IBOutlet UINavigationItem *topNavBar;
@@ -33,6 +38,10 @@
     NSNumber *yIntercept;
     IBOutlet UILabel *xAxisLabel;
     IBOutlet UILabel *yAxisLabel;
+    Line *line;
+    ExperimentBL *experiment;
+
+    NSManagedObjectContext *managedObjectContext;
 
 }
 
@@ -54,11 +63,15 @@
 @property(nonatomic,retain) NSNumber *yIntercept;
 @property(nonatomic,retain) IBOutlet UILabel *xAxisLabel;
 @property(nonatomic,retain) IBOutlet UILabel *yAxisLabel;
+@property(nonatomic,retain) Line *line;
+@property(nonatomic,retain) ExperimentBL *experiment;
+
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)done:(id)sender;
-- (IBAction)showTable:(id)sender;
 - (IBAction)sliderChanged:(id)sender;
 - (IBAction)submitLine:(id)sender;
+- (void)showLine;
 
 @end
 
